@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./Icon.ico">
     <title>ShimPortfolio</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Poppins";
+            color: #44AEB4;
         }
-
         body{
             background-color: #FEFEFE;
         }
-
-        /* .container{
-            width: 100vw;
-        } */
 
         .container-1{
             height: 100vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url('./cat-background.webp');
+            background-image: url('./Images/cat-background.webp');
             background-color: #000;
-            background-attachment: fixed;
 
 
             display: flex;
@@ -46,7 +41,6 @@
             font-size: 100px;
             color: #fff;
             text-shadow: 2px 2px 4px #000;
-            /* margin-left: 50px; */
         }
 
         .container-1 h3{
@@ -59,289 +53,198 @@
         }
 
         .container-2{
-            height: 100vh;
-            margin: 40px 40px;
-        }
-
-        .container-2 img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .container-3{
-            margin: auto;
-            text-align: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            width: 100%;
-            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-        }
-
-        .container-3 h1 {
-            color: #3a9ea5;
-            font-size: 3rem;
-            letter-spacing: 4px;
-            /* font-weight: 500; */
-            font-family: 'Bagel Fat One';
-        }
-
-        .container-3 p {
-            color: #3a9ea5;
-            font-size: 1.2rem;
-            font-family: 'Poppins';
-            font-weight: 600;
-        }
-
-        .container-3 .buttons {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .container-3 button {
-            border: 2px solid #e97134;
-            background: transparent;
-            color: #e97134;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .container-3 button:hover {
-            background: #e97134;
-            color: white;
-        }
-
-        .container-3 button.active {
-            background: #e97134;
-            color: white;
-        }
-
-        .container-4 {
+            /* height: 100vh; */
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(3, 200px);
-            gap: 20px; /* Space between grid items */
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: white;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: 
+                "profile about"
+                "socials skills";
+
+            /* background-color: antiquewhite; */
+            margin: 50px 8%;
         }
 
-        .grid-item {
-            background: #d1d5db;
-            height: 100%;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-        .grid-item:hover {
-            transform: scale(1.03);
-        }
-
-        .col-span-2 {
-            grid-column: span 2;
-        }
-        .row-span-2 {
-            grid-row: span 2;
-        }
-
-        .container-5{
+        .container-2 .right-content{
             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
             align-items: start;
-            margin: 0 10% 50px;
+
+            padding: 15px;
         }
 
-        .image-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 200px);
-            gap: 20px; /* Space between grid items */
-            width: 67%;
-            margin: auto;
-            padding: 20px;
-            background: white;
+        .profile{
+            align-items: center;
+            /* background-color: rgb(228, 250, 215); */
         }
 
-        .details {
-            width: 33%;
-            padding: 40px;
+        .profile img{
+            width: 350px;
         }
 
-        .details h3 {
-            font-size: 2rem;
-            letter-spacing: 4px;
-            font-weight: 700;
-            font-family: 'Poppins';
-            color: #75A75E;
+        .about{
+            gap: 20px;
+            padding-left: 50px;
+        }
+
+        .about img{
+            width: 250px;
             margin-bottom: 10px;
         }
 
-        .details p {
-            font-size: 1.1rem;
-            font-family: 'Poppins';
+        .about p{
+            font-size: 20px;
             font-weight: 400;
-            color: #3a9ea5;
         }
 
-        .container-3.testimonials{
-            background-color: #E6F2F5;
-            padding: 70px 0 0 0;
-            border-radius: 0;
+        .socials{
+            /* background-color: rgb(215, 250, 245); */
+            align-items: center;
         }
 
-        .container-6{
-            padding: 50px 10%;
+        .socials span{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social{
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap:50px;
-            background-color: #E6F2F5;
-            padding-bottom: 80px;
+            gap: 20px;
         }
 
-        .container-6 img{
-            width: 366px;
-            cursor: pointer;
-            /* box-shadow: #000 0px 0px 10px;
-            border-radius: 10px; */
-            transition: all 0.3s ease-in-out;
-        }
-        .container-6 img:hover{
-            transform: scale(1.04);
-
+        .social img{
+            width: 53px;
         }
 
-        .middle-card{
-            margin-top: 50px ;
+        .skills{
+            /* background-color: rgb(250, 215, 215); */
+            gap: 20px;
+            padding-left: 50px;
         }
 
-        .container-7{
-            /* height: 100vh; */
-            margin: 0px 50px;
+        .skills h2{
+            color: #F27830;
+        }
+
+        .mediums {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 30px;
         }
 
-        .container-7 img{
-            width: 90%;
-            height: 90%;
-            object-fit: cover;
-            object-position: center;
+        .mediums img{
+            padding: 10px;
+            width: 50px;
         }
 
     </style>
 </head>
 <body>
-    <div class="container container-1">
+    <section class="container container-1">
         <h1>YOSHEEFIED</h1>
         <h3>Where creativity meets charm!</h3>
-    </div>
-
-    <div class="container container-2">
-        <!-- <div class="left-section">
-            <div class="profile">
-
+    </section>
+    <section class="container container-2">
+        <div class="left-content">
+            <div class="content profile">
+                <img src="./Images/Shimpo.png" alt="">
             </div>
-            <div class="socials">
-
+            <div class="content socials">
+                <span>
+                    <div class="social">
+                        <img src="./Images/Email.png" alt="">
+                        <div class="info">
+                            <h3>Email</h3>
+                            <p>extraishis@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <img src="./Images/Tiktok.png" alt="">
+                        <div class="info">
+                            <h3>Tiktok</h3>
+                            <p><a href="https://www.tiktok.com/@i.ishi?_t=ZS-8vA6zfsZcTA&_r=1">Yoshee (@i.ishi)</a></p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <img src="./Images/Facebook.png" alt="">
+                        <div class="info">
+                            <h3>Facebook</h3>
+                            <p><a href="https://www.facebook.com/yosheetiglao?rdid=L0heWfPA2wPiDIYl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sn5c6UFU%2F#">Yoshieefied</a></p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <img src="./Images/Instagram.png" alt="">
+                        <div class="info">
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/yosheerobles?igsh=MTJuaGc3MDdjZGIyaw==">yosheerobles</a></p>
+                        </div>
+                    </div>
+                </span>
             </div>
-        </div>  
-        <div class="right-section">
-            <div class="about">
+        </div>
 
+        <div class="right-content">
+            <div class="content about">
+                <img src="./Images/Hello.png" alt="">
+                <p>I’m <b>Ishi Robles</b>, a 4th-year architecture student with a love for creative art and design. From Digital Illustrations to traditional artworks, I offer a wide range of commissions to bring your ideas to life. Let’s collaborate and create something special together!</p>
+                <!-- <p>Art and design have always been my way of expressing ideas and emotions. Whether it's architectural visualization, character illustrations, or custom design work, I am dedicated to transforming concepts into stunning visuals. Every project is a new opportunity to explore creativity and craft something meaningful.</p> -->
             </div>
-            <div class="skills"></div>
-        </div> -->
-        <br>
-        <img src="./Group 11.png" alt="">
-    </div>
+            <div class="content skills">
+                <h2>SOFTWARES</h2>
+                <div class="mediums softwares"></div>
 
-    <div class="container-3">
-        <h1>DIGITAL WORKS</h1>
-        <p>Personal works and commissions</p>
-        <div class="buttons">
-            <button class="active">ALL</button>
-            <button>LOGO</button>
-            <button>BROCHURE</button>
-            <button>PACKAGING</button>
-            <button>CLOTHING PRINTS</button>
-        </div>
-        <div class="buttons">
-            <button>STICKER & GRAPHICS</button>
-            <button>ILLUSTRATIONS</button>
-            <button>HIRAYA MANAWARI</button>
-        </div>
-    </div>
+                <h2>TRADITIONAL MEDIUMS</h2>
+                <div class="mediums traditional">
+                </div>
 
-    <div class="container-4">
-        <div class="grid-item"></div> <!-- Spans 2 columns -->
-        <div class="grid-item col-span-2"></div> <!-- Spans 2 columns -->
-        <div class="grid-item row-span-2"></div> <!-- Spans 1 column, 2 rows -->
-        <div class="grid-item"></div> <!-- Takes 1 column -->
-        <div class="grid-item"></div> <!-- Takes 1 column -->
-        <div class="grid-item"></div> <!-- Takes 1 column -->
-        <div class="grid-item"></div> <!-- Takes 1 column -->
-        <div class="grid-item"></div> <!-- Spans 2 columns -->
-        <div class="grid-item col-span-2"></div> <!-- Takes 1 column -->
-        <div class="grid-item"></div> <!-- Takes 1 column -->
-        <div class="grid-item col-span-2"></div> <!-- Spans 2 columns -->
-    </div> 
+                <script>
+                    let backgroundColors = ["#6FB6C9", "#7B9465", "#F2C94C", "#E8B770", "#E2784B", "#447C76"];
+                    let images = ["./Images/Photoshop.png", "./Images/Autocad.png", "./Images/Ibispaint.png", "./Images/Canva.png", "./Images/Sketchup.png"];
 
-    <div class="container-3">
-        <h1>TRADITIONAL WORKS</h1>
-        <p>Personal works and commissions</p>
-        <div class="buttons">
-            <button>ALL</button>
-            <button class="active">GRAPHITE PORTRAITS</button>
-            <button>COLORED PENCILS</button>
-            <button>MARKERS</button>
-        </div>
-        <div class="buttons">
-            <button>PAINTINGS</button>
-            <button>GLASS PAINTING</button>
-            <button>CROCHET</button>
-        </div>
-    </div>
+                    let softwares = document.querySelector(".softwares");
 
-    <div class="container-5">
-        <div class="image-container">
-            <div class="grid-item"></div> <!-- Spans 2 columns -->
-            <div class="grid-item col-span-2"></div> <!-- Spans 2 columns -->
-            <div class="grid-item"></div> <!-- Spans 1 column, 2 rows -->
-            <div class="grid-item"></div> <!-- Takes 1 column -->
-            <div class="grid-item"></div> <!-- Takes 1 column -->
-            <div class="grid-item col-span-2"></div> <!-- Takes 1 column -->
-            <div class="grid-item"></div> <!-- Takes 1 column -->
+                    images.forEach((image, index) => {
+                        let imgWrapper = document.createElement("div"); // Create wrapper div
+                        imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
+                        imgWrapper.style.borderRadius = "7px"; // Add border radius
+
+                        let imgElement = document.createElement("img"); // Create the image element
+                        imgElement.src = image;
+                        imgElement.alt = "Software Image";
+                        imgElement.classList.add("mediums"); // Ensuring it gets existing styles
+
+                        imgWrapper.appendChild(imgElement); // Append image to wrapper
+                        softwares.appendChild(imgWrapper); // Append wrapper to softwares
+                    });
+
+
+                    let traditional = document.querySelector(".traditional");
+
+                    images.forEach((image, index) => {
+                        let imgWrapper = document.createElement("div"); // Create wrapper div
+                        imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
+                        imgWrapper.style.borderRadius = "7px"; // Add border radius
+
+                        let imgElement = document.createElement("img"); // Create the image element
+                        imgElement.src = image;
+                        imgElement.alt = "Software Image";
+                        imgElement.classList.add("mediums"); // Ensuring it gets existing styles
+
+                        imgWrapper.appendChild(imgElement); // Append image to wrapper
+                        traditional.appendChild(imgWrapper); // Append wrapper to traditional
+                    });
+                </script>
+            </div>            
         </div>
 
-        <div class="details">
-            <h3>GRAPHITE PORTRAITS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
-        </div>
-    </div> 
 
-    <div class="container-3 testimonials">
-        <h1>TESTIMONIALS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-    </div>
 
-    <div class="container-6">
-        <img src="./Testimonal Card-1.png" alt="">
-        <img class="middle-card" src="./Testimonal Card-2.png" alt="">
-        <img src="./Testimonal Card-3.png" alt="">
-    </div>
-
-    <div class="container-7">
-        <img src="./Footer.png" alt="">
-    </div>
+    </section>
 </body>
 </html>
