@@ -6,6 +6,7 @@
     <title>ShimPortfolio</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         *{
@@ -25,7 +26,9 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-image: url('./Images/cat-background.webp');
+            background-attachment: fixed;
             background-color: #000;
+            
 
 
             display: flex;
@@ -37,8 +40,9 @@
         }
 
         .container-1 h1{
-            font-family: 'Bagel Fat One', cursive;
-            font-size: 100px;
+            font-family: 'Modak';
+            font-size: 110px;
+            font-weight: 400;
             color: #fff;
             text-shadow: 2px 2px 4px #000;
         }
@@ -49,25 +53,20 @@
             font-weight: 400;
             color: #ece9e9;
             text-shadow: 2px 2px 4px #000;
-            margin-top: -25px;
+            margin-top: -45px;
+            margin-left: 10px;
         }
 
         .container-2{
             /* height: 100vh; */
             display: grid;
-            grid-template-columns: 1fr 4fr;
+            grid-template-columns: 2fr 4fr;
             grid-template-areas: 
                 "profile about"
                 "socials skills";
 
             /* background-color: antiquewhite; */
-            margin: 50px 8%;
-        }
-
-        .container-2 .right-content{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            margin: 70px 8%;
         }
 
         .content{
@@ -82,23 +81,20 @@
             align-items: center;
             /* background-color: rgb(228, 250, 215); */
         }
-
         .profile img{
-            width: 350px;
+            width: 400px;
         }
 
         .about{
             gap: 20px;
-            padding-left: 50px;
+            /* padding-left: 50px; */
         }
-
         .about img{
-            width: 250px;
+            width: 300px;
             margin-bottom: 10px;
         }
-
         .about p{
-            font-size: 20px;
+            font-size: 23px;
             font-weight: 400;
         }
 
@@ -106,145 +102,406 @@
             /* background-color: rgb(215, 250, 245); */
             align-items: center;
         }
-
         .socials span{
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        .social{
+        .socials .social{
             display: flex;
             align-items: center;
             gap: 20px;
+
+            font-size: 18px;
+        }
+        .socials .social img{
+            width: 65px;
+        }
+        .socials .social p{
+            font-size: 22px;
         }
 
-        .social img{
-            width: 53px;
-        }
 
         .skills{
             /* background-color: rgb(250, 215, 215); */
-            gap: 20px;
-            padding-left: 50px;
+            gap: 25px;
+            /* padding-left: 50px; */
         }
-
         .skills h2{
             color: #F27830;
+            font-size: 25px;
         }
 
-        .mediums {
+        .skills .mediums {
             display: flex;
-            gap: 30px;
+            gap: 35px;
+        }
+        .skills .mediums img{
+            padding: 15px;
+            width: 65px;
         }
 
-        .mediums img{
-            padding: 10px;
-            width: 50px;
+        .container-3{
+            margin: auto;
+            text-align: center;
+            background: #fff;
+            border-radius: 10px;
+            width: 100%;
+
+            margin: 70px 0;
         }
+
+        .container-3 h1 {
+            color: #3a9ea5;
+            font-size: 4rem;
+            letter-spacing: 4px;
+            font-family: 'Bagel Fat One';
+        }
+
+        .container-3 p {
+            color: #3a9ea5;
+            font-size: 1.5rem;
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+
+        .container-3 .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .container-3 button {
+            border: 2px solid #e97134;
+            background: transparent;
+            color: #e97134;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container-3 button:hover {
+            background: #e97134;
+            color: white;
+        }
+
+        .container-3 button.active {
+            background: #e97134;
+            color: white;
+        }
+
+        .container-4{
+            padding: 0 10%;
+        }
+
+        .project-container{
+            width: 100%;
+            display: none;
+        }
+
+        .project-container.active{
+            display: flex;
+        }
+
+        .image-gallery{
+            display: grid;
+            gap: 25px; 
+            padding: 20px;
+            background: white;
+        }
+
+        .default .image-gallery{
+            width: 100%;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 250px);
+        }
+
+        .description .image-gallery{
+            width: 67%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 250px);
+        }
+
+        .description .details {
+            width: 33%;
+            padding: 40px;
+        }
+
+        .description .details h3 {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            font-weight: 700;
+            font-family: 'Poppins';
+            color: #75A75E;
+            margin-bottom: 10px;
+        }
+
+        .description .details p {
+            font-size: 1.4rem;
+            font-family: 'Poppins';
+            font-weight: 400;
+            color: #3a9ea5;
+        }
+
+        .grid-item {
+            background: #d1d5db;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .grid-item:hover {
+            transform: scale(1.03);
+        }
+
+        .col-span-2 {
+            grid-column: span 2;
+        }
+        .row-span-2 {
+            grid-row: span 2;
+        }
+
 
     </style>
 </head>
 <body>
     <section class="container container-1">
-        <h1>YOSHEEFIED</h1>
+        <h1>Yoshieefied</h1>
         <h3>Where creativity meets charm!</h3>
     </section>
     <section class="container container-2">
-        <div class="left-content">
-            <div class="content profile">
-                <img src="./Images/Shimpo.png" alt="">
-            </div>
-            <div class="content socials">
-                <span>
-                    <div class="social">
-                        <img src="./Images/Email.png" alt="">
-                        <div class="info">
-                            <h3>Email</h3>
-                            <p>extraishis@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="social">
-                        <img src="./Images/Tiktok.png" alt="">
-                        <div class="info">
-                            <h3>Tiktok</h3>
-                            <p><a href="https://www.tiktok.com/@i.ishi?_t=ZS-8vA6zfsZcTA&_r=1">Yoshee (@i.ishi)</a></p>
-                        </div>
-                    </div>
-                    <div class="social">
-                        <img src="./Images/Facebook.png" alt="">
-                        <div class="info">
-                            <h3>Facebook</h3>
-                            <p><a href="https://www.facebook.com/yosheetiglao?rdid=L0heWfPA2wPiDIYl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sn5c6UFU%2F#">Yoshieefied</a></p>
-                        </div>
-                    </div>
-                    <div class="social">
-                        <img src="./Images/Instagram.png" alt="">
-                        <div class="info">
-                            <h3>Instagram</h3>
-                            <p><a href="https://www.instagram.com/yosheerobles?igsh=MTJuaGc3MDdjZGIyaw==">yosheerobles</a></p>
-                        </div>
-                    </div>
-                </span>
-            </div>
+        <div class="content profile">
+            <img src="./Images/Shimpo.png" alt="">
         </div>
-
-        <div class="right-content">
-            <div class="content about">
-                <img src="./Images/Hello.png" alt="">
-                <p>I’m <b>Ishi Robles</b>, a 4th-year architecture student with a love for creative art and design. From Digital Illustrations to traditional artworks, I offer a wide range of commissions to bring your ideas to life. Let’s collaborate and create something special together!</p>
-                <!-- <p>Art and design have always been my way of expressing ideas and emotions. Whether it's architectural visualization, character illustrations, or custom design work, I am dedicated to transforming concepts into stunning visuals. Every project is a new opportunity to explore creativity and craft something meaningful.</p> -->
-            </div>
-            <div class="content skills">
-                <h2>SOFTWARES</h2>
-                <div class="mediums softwares"></div>
-
-                <h2>TRADITIONAL MEDIUMS</h2>
-                <div class="mediums traditional">
+        <div class="content about">
+            <img src="./Images/Hello.png" alt="">
+            <p>I’m <b>Ishi Robles</b>, a 4th-year architecture student with a love for creative art and design. From Digital Illustrations to traditional artworks, I offer a wide range of commissions to bring your ideas to life. Let’s collaborate and create something special together!</p>
+            <p>Art and design have always been my way of expressing ideas and emotions. Whether it's architectural visualization, character illustrations, or custom design work, I am dedicated to transforming concepts into stunning visuals. Every project is a new opportunity for me to explore creativity and craft something meaningful.</p>
+        </div>
+        <div class="content socials">
+            <span>
+                <div class="social">
+                    <img src="./Images/Email.png" alt="">
+                    <div class="info">
+                        <h3>Email</h3>
+                        <p>extraishis@gmail.com</p>
+                    </div>
                 </div>
+                <div class="social">
+                    <img src="./Images/Tiktok.png" alt="">
+                    <div class="info">
+                        <h3>Tiktok</h3>
+                        <p><a href="https://www.tiktok.com/@i.ishi?_t=ZS-8vA6zfsZcTA&_r=1">Yoshee (@i.ishi)</a></p>
+                    </div>
+                </div>
+                <div class="social">
+                    <img src="./Images/Facebook.png" alt="">
+                    <div class="info">
+                        <h3>Facebook</h3>
+                        <p><a href="https://www.facebook.com/yosheetiglao?rdid=L0heWfPA2wPiDIYl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sn5c6UFU%2F#">Yoshieefied</a></p>
+                    </div>
+                </div>
+                <div class="social">
+                    <img src="./Images/Instagram.png" alt="">
+                    <div class="info">
+                        <h3>Instagram</h3>
+                        <p><a href="https://www.instagram.com/yosheerobles?igsh=MTJuaGc3MDdjZGIyaw==">yosheerobles</a></p>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="content skills">
+            <h2>SOFTWARES</h2>
+            <div class="mediums softwares"></div>
 
-                <script>
-                    let backgroundColors = ["#6FB6C9", "#7B9465", "#F2C94C", "#E8B770", "#E2784B", "#447C76"];
-                    let images = ["./Images/Photoshop.png", "./Images/Autocad.png", "./Images/Ibispaint.png", "./Images/Canva.png", "./Images/Sketchup.png"];
+            <h2>TRADITIONAL MEDIUMS</h2>
+            <div class="mediums traditional">
+            </div>
 
-                    let softwares = document.querySelector(".softwares");
+            <script>
+                let backgroundColors = ["#44AEB4", "#75A75E", "#F0C05B", "#F3B15D", "#F27830", "#2B6660"];
+                let imagesSoftwares = ["./Images/Photoshop.png", "./Images/Ibispaint.png", "./Images/Canva.png", "./Images/Autocad.png",  "./Images/Sketchup.png"];
 
-                    images.forEach((image, index) => {
-                        let imgWrapper = document.createElement("div"); // Create wrapper div
-                        imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
-                        imgWrapper.style.borderRadius = "7px"; // Add border radius
+                let softwares = document.querySelector(".softwares");
 
-                        let imgElement = document.createElement("img"); // Create the image element
-                        imgElement.src = image;
-                        imgElement.alt = "Software Image";
-                        imgElement.classList.add("mediums"); // Ensuring it gets existing styles
+                imagesSoftwares.forEach((image, index) => {
+                    let imgWrapper = document.createElement("div"); // Create wrapper div
+                    imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
+                    imgWrapper.style.borderRadius = "10px"; // Add border radius
 
-                        imgWrapper.appendChild(imgElement); // Append image to wrapper
-                        softwares.appendChild(imgWrapper); // Append wrapper to softwares
-                    });
+                    let imgElement = document.createElement("img"); // Create the image element
+                    imgElement.src = image;
+                    imgElement.alt = "Software Image";
+                    imgElement.classList.add("mediums"); // Ensuring it gets existing styles
+
+                    imgWrapper.appendChild(imgElement); // Append image to wrapper
+                    softwares.appendChild(imgWrapper); // Append wrapper to softwares
+                });
 
 
-                    let traditional = document.querySelector(".traditional");
+                let traditional = document.querySelector(".traditional");
+                let imagesTraditionals = ["./Images/Graphite.png", "./Images/Watercolor.png", "./Images/Colorpencil.png", "./Images/Acrylic.png",  "./Images/Marker.png", "./Images/Crochet.png"];
 
-                    images.forEach((image, index) => {
-                        let imgWrapper = document.createElement("div"); // Create wrapper div
-                        imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
-                        imgWrapper.style.borderRadius = "7px"; // Add border radius
+                imagesTraditionals.forEach((image, index) => {
+                    let imgWrapper = document.createElement("div"); // Create wrapper div
+                    imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
+                    imgWrapper.style.borderRadius = "7px"; // Add border radius
 
-                        let imgElement = document.createElement("img"); // Create the image element
-                        imgElement.src = image;
-                        imgElement.alt = "Software Image";
-                        imgElement.classList.add("mediums"); // Ensuring it gets existing styles
+                    let imgElement = document.createElement("img"); // Create the image element
+                    imgElement.src = image;
+                    imgElement.alt = "Software Image";
+                    imgElement.classList.add("mediums"); // Ensuring it gets existing styles
 
-                        imgWrapper.appendChild(imgElement); // Append image to wrapper
-                        traditional.appendChild(imgWrapper); // Append wrapper to traditional
-                    });
-                </script>
-            </div>            
+                    imgWrapper.appendChild(imgElement); // Append image to wrapper
+                    traditional.appendChild(imgWrapper); // Append wrapper to traditional
+                });
+            </script>
+        </div>    
+    </section>
+
+    <div class="container-3">
+        <h1>DIGITAL WORKS</h1>
+        <p>Personal works and commissions</p>
+        <div class="buttons">
+            <button class="active" data-target="all">ALL</button>
+            <button data-target="brochure">BROCHURE</button>
+            <button data-target="packaging">PACKAGING</button>
+            <button data-target="clothing">CLOTHING PRINTS</button>
+        </div>
+        <div class="buttons">
+            <button data-target="logo">LOGO</button>
+            <button data-target="sticker">STICKER & GRAPHICS</button>
+            <button data-target="illustration">ILLUSTRATIONS</button>
+        </div>
+    </div>
+
+    <div class="container container-4" id="digital">
+        <div class="default project-container active" id="all">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item row-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+            </div>
         </div>
 
+        <div class="description project-container" id="brochure">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>GRAPHITE PORTRAITS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-3">
+        <h1>TRADITIONAL WORKS</h1>
+        <p>Personal works and commissions</p>
+        <div class="buttons">
+            <button data-target="all">ALL</button>
+            <button data-target="graphite" class="active">GRAPHITE PORTRAITS</button>
+            <button data-target="colored">COLORED PENCILS</button>
+            <button data-target="markers">MARKERS</button>
+        </div>
+        <div class="buttons">
+            <button data-target="paintings">PAINTINGS</button>
+            <button data-target="glasspainting">GLASS PAINTING</button>
+            <button data-target="crochet">CROCHET</button>
+        </div>
+    </div>
 
-    </section>
+    <div class="container container-4" id="traditional">
+        <div class="default project-container " id="all">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item row-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+            </div>
+        </div>
+
+        <div class="description project-container active" id="brochure">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>GRAPHITE PORTRAITS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".buttons button");
+    
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            const target = this.getAttribute("data-target");
+            const parentContainer = this.closest(".container-3").nextElementSibling; // Gets the corresponding container-4
+            
+            if (!parentContainer) return;
+
+            const projectContainers = parentContainer.querySelectorAll(".project-container");
+            
+            // Hide all project containers
+            projectContainers.forEach(container => {
+                container.classList.remove("active");
+            });
+            
+            // Show the selected category
+            const targetContainer = parentContainer.querySelector(`#${target}`);
+            if (targetContainer) {
+                targetContainer.classList.add("active");
+            }
+
+            // Remove active class from all buttons in the same section
+            this.closest(".container-3").querySelectorAll(".buttons button").forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            // Add active class to clicked button
+            this.classList.add("active");
+        });
+    });
+});
+
+    </script>
+
 </body>
 </html>
