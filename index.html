@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShimPortfolio</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
@@ -15,6 +15,8 @@
             box-sizing: border-box;
             font-family: "Poppins";
             color: #44AEB4;
+
+            transition: all 0.3s ease-in-out;
         }
         body{
             background-color: #FEFEFE;
@@ -148,8 +150,6 @@
             background: #fff;
             border-radius: 10px;
             width: 100%;
-
-            margin: 70px 0;
         }
 
         .container-3 h1 {
@@ -197,7 +197,9 @@
         }
 
         .container-4{
+            margin: 70px 0;
             padding: 0 10%;
+            
         }
 
         .project-container{
@@ -266,6 +268,86 @@
             grid-row: span 2;
         }
 
+        .container-5{
+            background-color: #E6F2F5;
+            padding: 70px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-5 h1 {
+            color: #3a9ea5;
+            font-size: 4rem;
+            letter-spacing: 4px;
+            font-family: 'Bagel Fat One';
+        }
+
+        .container-5 p {
+            color: #3a9ea5;
+            font-size: 1.5rem;
+            font-family: 'Poppins';
+            font-weight: 600;
+        }
+
+        .testimonials{
+            margin: 70px 0 0;
+            display: flex;
+            gap: 40px;
+        }
+
+        .testimonial-card{
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }.testimonial-card:hover{
+            transform: scale(1.03);
+        }
+
+        .testimonial-card img{
+            width: 365px;
+            
+        }
+
+        .testimonial-card h3, .testimonial-card p{
+            font-family: 'Poppins';
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+
+        .testimonial-card.card1 h3, .testimonial-card.card1 p{ color: #F3772F; }
+        .testimonial-card.card3 h3, .testimonial-card.card3 p{ color: #75A75E; }
+
+        .testimonial-card h3{
+            font-size: 25px;
+            font-weight: bold;
+            top: 230px;
+        }
+
+        .testimonial-card p{
+            padding: 35px;
+            font-size: 13px;
+            font-weight: 400;
+            top: 250px;
+        }
+
+        .testimonial-card .stars{
+            font-size: 27px;
+            position: absolute;
+            top: 445px;
+
+            display: flex;
+            gap: 10px;
+        }
+        .testimonial-card .stars i{
+            color: #F1BF25;
+        }
+
 
     </style>
 </head>
@@ -326,13 +408,14 @@
             <script>
                 let backgroundColors = ["#44AEB4", "#75A75E", "#F0C05B", "#F3B15D", "#F27830", "#2B6660"];
                 let imagesSoftwares = ["./Images/Photoshop.png", "./Images/Ibispaint.png", "./Images/Canva.png", "./Images/Autocad.png",  "./Images/Sketchup.png"];
-
+                let softwareTitles = ["Photoshop", "Ibispaint", "Canva", "Autocad", "Sketchup"];
                 let softwares = document.querySelector(".softwares");
 
                 imagesSoftwares.forEach((image, index) => {
                     let imgWrapper = document.createElement("div"); // Create wrapper div
                     imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
                     imgWrapper.style.borderRadius = "10px"; // Add border radius
+                    imgWrapper.title = softwareTitles[index]; // Tooltip for the image
 
                     let imgElement = document.createElement("img"); // Create the image element
                     imgElement.src = image;
@@ -346,11 +429,13 @@
 
                 let traditional = document.querySelector(".traditional");
                 let imagesTraditionals = ["./Images/Graphite.png", "./Images/Watercolor.png", "./Images/Colorpencil.png", "./Images/Acrylic.png",  "./Images/Marker.png", "./Images/Crochet.png"];
+                let traditionalTitles = ["Graphite", "Watercolor", "Colored Pencil", "Acrylic", "Marker", "Crochet"];
 
                 imagesTraditionals.forEach((image, index) => {
                     let imgWrapper = document.createElement("div"); // Create wrapper div
                     imgWrapper.style.backgroundColor = backgroundColors[index] || "transparent"; // Assign background color or transparent
-                    imgWrapper.style.borderRadius = "7px"; // Add border radius
+                    imgWrapper.style.borderRadius = "7px"; // Add border 
+                    imgWrapper.title = traditionalTitles[index]; // Tooltip for the image
 
                     let imgElement = document.createElement("img"); // Create the image element
                     imgElement.src = image;
@@ -466,41 +551,84 @@
         </div>
     </div>
 
+    <div class="container container-5">
+        <h1>CUSTOMER FEEDBACK</h1>
+        <p>Refine art with your insight - Every critique sparks creativity!</p>
+
+        <div class="testimonials">
+            <div class="testimonial-card card1">
+                <img src="./Images/Testimonial-1.png" alt="">
+                <h3>Chris P. Bacon</h3>
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.”</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card card2" style="margin-top: 50px;">
+                <img src="./Images/Testimonial-2.png" alt="">
+                <h3>Chris P. Bacon</h3>
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.”</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-card card3">
+                <img src="./Images/Testimonial-3.png" alt="">
+                <h3>Chris P. Bacon</h3>
+                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.”</p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".buttons button");
-    
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            const target = this.getAttribute("data-target");
-            const parentContainer = this.closest(".container-3").nextElementSibling; // Gets the corresponding container-4
-            
-            if (!parentContainer) return;
+            const buttons = document.querySelectorAll(".buttons button");
+        
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const target = this.getAttribute("data-target");
+                    const parentContainer = this.closest(".container-3").nextElementSibling; // Gets the corresponding container-4
+                    
+                    if (!parentContainer) return;
 
-            const projectContainers = parentContainer.querySelectorAll(".project-container");
-            
-            // Hide all project containers
-            projectContainers.forEach(container => {
-                container.classList.remove("active");
+                    const projectContainers = parentContainer.querySelectorAll(".project-container");
+                    
+                    // Hide all project containers
+                    projectContainers.forEach(container => {
+                        container.classList.remove("active");
+                    });
+                    
+                    // Show the selected category
+                    const targetContainer = parentContainer.querySelector(`#${target}`);
+                    if (targetContainer) {
+                        targetContainer.classList.add("active");
+                    }
+
+                    // Remove active class from all buttons in the same section
+                    this.closest(".container-3").querySelectorAll(".buttons button").forEach(btn => {
+                        btn.classList.remove("active");
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add("active");
+                });
             });
-            
-            // Show the selected category
-            const targetContainer = parentContainer.querySelector(`#${target}`);
-            if (targetContainer) {
-                targetContainer.classList.add("active");
-            }
-
-            // Remove active class from all buttons in the same section
-            this.closest(".container-3").querySelectorAll(".buttons button").forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-            // Add active class to clicked button
-            this.classList.add("active");
         });
-    });
-});
-
     </script>
 
 </body>
