@@ -267,6 +267,12 @@
         .row-span-2 {
             grid-row: span 2;
         }
+        .col-span-3 {
+            grid-column: span 3;
+        }
+        .row-span-3 {
+            grid-row: span 3;
+        }
 
         .container-5{
             background-color: #E6F2F5;
@@ -346,6 +352,38 @@
         }
         .testimonial-card .stars i{
             color: #F1BF25;
+        }
+
+        .container-6{
+            margin: 80px 22%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container-6 img{
+            width: 500px;
+            /* margin: 0 50px; */
+        }
+
+        .container-6 span{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container-6 .social{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            font-size: 18px;
+        }
+        .container-6 .social img{
+            width: 65px;
+        }
+        .container-6 .social p{
+            font-size: 22px;
         }
 
 
@@ -450,6 +488,136 @@
     </section>
 
     <div class="container-3">
+        <h1>TRADITIONAL WORKS</h1>
+        <p>Personal works and commissions</p>
+        <div class="buttons">
+            <button data-target="all" class="active">ALL</button>
+            <button data-target="graphite">GRAPHITE PORTRAITS</button>
+            <button data-target="colored">COLORED PENCILS</button>
+            <button data-target="markers">MARKERS</button>
+        </div>
+        <div class="buttons">
+            <button data-target="paintings">PAINTINGS</button>
+            <button data-target="glasspainting">GLASS PAINTING</button>
+            <button data-target="crochet">CROCHET</button>
+        </div>
+    </div>
+
+    <div class="container container-4" id="traditional">
+        <div class="default project-container active" id="all">
+            <div class="image-gallery">
+                <div class="grid-item col-span-3 row-span-2"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item row-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <!-- <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div> -->
+            </div>
+        </div>
+        <div class="description project-container" id="graphite">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>GRAPHITE PORTRAITS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
+            </div>
+        </div>
+        <div class="description project-container" id="colored">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>COLORED PENCILS</h3>
+                <p>Intricate and detailed works rendered with color pencils, offering a soft, layered finish and precise shading, ideal for semi realistic to realistic or stylized pieces.</p>
+            </div>
+        </div>
+        <div class="description project-container" id="markers">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>MARKERS</h3>
+                <p>Bold, vibrant artworks created with alcohol-based markers ideal for semirealistic and cartoonish artworks.</p>
+            </div>
+        </div>
+        <div class="description project-container" id="paintings">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>PAINTINGS</h3>
+                <p>All painted artworks with different mediums like watercolour, acrylic, and gouache. From minimalist and cartoonish styles to detailed paintings.</p>
+            </div>
+        </div>
+        <div class="description project-container" id="glasspainting">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>GLASS PAINTING</h3>
+                <p>Acrylic paintings on glass canvases. Varies from minimalist to detailed paintings.</p>
+            </div>
+        </div>
+        <div class="description project-container" id="crochet">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>CROCHET</h3>
+                <p>Handmade crochet art, ranging from decorative pieces to functional designs.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-3">
         <h1>DIGITAL WORKS</h1>
         <p>Personal works and commissions</p>
         <div class="buttons">
@@ -461,24 +629,24 @@
         <div class="buttons">
             <button data-target="logo">LOGO</button>
             <button data-target="sticker">STICKER & GRAPHICS</button>
-            <button data-target="illustration">ILLUSTRATIONS</button>
+            <button data-target="illustration">MIXED ILLUSTRATIONS</button>
         </div>
     </div>
 
     <div class="container container-4" id="digital">
         <div class="default project-container active" id="all">
             <div class="image-gallery">
-                <div class="grid-item"></div>
+                <div class="grid-item col-span-2 row-span-2" id=""></div>
                 <div class="grid-item col-span-2"></div>
                 <div class="grid-item row-span-2"></div>
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
                 <div class="grid-item col-span-2"></div>
                 <div class="grid-item"></div>
                 <div class="grid-item col-span-2"></div>
+                <!-- <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div> -->
             </div>
         </div>
 
@@ -494,46 +662,12 @@
             </div>
     
             <div class="details">
-                <h3>GRAPHITE PORTRAITS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-3">
-        <h1>TRADITIONAL WORKS</h1>
-        <p>Personal works and commissions</p>
-        <div class="buttons">
-            <button data-target="all">ALL</button>
-            <button data-target="graphite" class="active">GRAPHITE PORTRAITS</button>
-            <button data-target="colored">COLORED PENCILS</button>
-            <button data-target="markers">MARKERS</button>
-        </div>
-        <div class="buttons">
-            <button data-target="paintings">PAINTINGS</button>
-            <button data-target="glasspainting">GLASS PAINTING</button>
-            <button data-target="crochet">CROCHET</button>
-        </div>
-    </div>
-
-    <div class="container container-4" id="traditional">
-        <div class="default project-container " id="all">
-            <div class="image-gallery">
-                <div class="grid-item"></div>
-                <div class="grid-item col-span-2"></div>
-                <div class="grid-item row-span-2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item col-span-2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item col-span-2"></div>
+                <h3>BROCHURE</h3>
+                <p>Design layouts for informational brochures, focusing on visually appealing, structured, and readable content for promoting a product, service, or event.</p>
             </div>
         </div>
 
-        <div class="description project-container active" id="brochure">
+        <div class="description project-container" id="packaging">
             <div class="image-gallery">
                 <div class="grid-item"></div>
                 <div class="grid-item col-span-2"></div>
@@ -545,12 +679,80 @@
             </div>
     
             <div class="details">
-                <h3>GRAPHITE PORTRAITS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reprehenderit cumque neque voluptas officia aliquid totam dolorum earum tempora dolorem aut omnis nisi, doloremque consequatur mollitia deleniti, nobis libero! Accusantium velit modi cum aperiam recusandae laborum accusamus eligendi suscipit, mollitia et sint in optio reiciendis officia, alias doloribus voluptatum. Magnam?</p>
+                <h3>PACKAGING</h3>
+                <p>Thoughtfully designed packaging layouts that enhance product presentation, ensuring both functionality and visual appeal. Each design is created to reflect the brand and attract consumers while maintaining usability.</p>
+            </div>
+        </div>
+
+        <div class="description project-container" id="clothing">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>CLOTHING PRINTS</h3>
+                <p>Unique and eye-catching graphics created for clothing items like t-shirts, hoodies, and accessories. Designs can range from bold statements to intricate illustrations, ensuring each piece stands out.</p>
+            </div>
+        </div>
+
+        <div class="description project-container" id="logo">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>LOGO</h3>
+                <p>Crafting distinct logos that capture the essence of a brand or business. Each logo is carefully designed to be memorable, scalable, and aligned with the brand’s identity.</p>
+            </div>
+        </div>
+
+        <div class="description project-container" id="sticker">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>STICKER & GRAPHICS</h3>
+                <p>Custom stickers and graphic elements, perfect for branding, packaging, or digital use. These designs can be playful, minimalistic, or detailed, tailored to client preferences.</p>
+            </div>
+        </div>
+
+        <div class="description project-container" id="illustration">
+            <div class="image-gallery">
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item col-span-2"></div>
+                <div class="grid-item"></div>
+            </div>
+    
+            <div class="details">
+                <h3>MIXED ILLUSTRATIONS</h3>
+                <p>A diverse range of digital artworks combining different techniques and styles, from detailed illustrations to simple, minimalistic drawings. Also Including other architectural commissions.</p>
             </div>
         </div>
     </div>
-
+    
     <div class="container container-5">
         <h1>CUSTOMER FEEDBACK</h1>
         <p>Refine art with your insight - Every critique sparks creativity!</p>
@@ -596,40 +798,130 @@
     </div>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function (){
+            let digitalContainer = document.getElementById("digital");
+            let allDigitalCategory = ['all', 'brochure', 'packaging', 'clothing', 'logo', 'sticker', 'illustration'];
+
+            let traditionalContainer = document.getElementById("traditional");
+            let allTraditionalCategory = ['all', 'graphite', 'colored', 'markers', 'paintings', 'glasspainting', 'crochet'];
+
+            allDigitalCategory.forEach(category => {
+                let container = digitalContainer.querySelector(`#${category}`);
+                let images = [];
+                if (category === 'all') {
+                    images = ["./Images/Sample/Koi-Girl.jpg", "./Images/Sample/Glass Painting 2.jpg", "./Images/Sample/Glass Painting 2.jpg", "./Images/Sample/Glass Painting 2.jpg", "./Images/Sample/Glass Painting 2.jpg"];
+                    let gridItems = container.querySelectorAll(".grid-item");
+                    gridItems.forEach((item, index) => {
+                        item.style.backgroundImage = `url(${images[0]})`;
+                        item.style.backgroundSize = "cover";
+                        item.style.backgroundPosition = "center";
+                    });
+                } 
+            })
+
+            allTraditionalCategory.forEach(category =>{
+                let container = traditionalContainer.querySelector(`#${category}`);
+                let images = [];
+                if (category === 'all') {
+                    let images = ["./Images/Traditional/All/1.jpg", "./Images/Traditional/All/2.jpg", "./Images/Traditional/All/3.jpg", "./Images/Traditional/All/4.jpg", "./Images/Traditional/All/5.jpg", "./Images/Traditional/All/6.jpg", "./Images/Traditional/All/7.jpg", "./Images/Traditional/All/8.jpg", "./Images/Traditional/All/9.jpg",];
+                    let gridItems = container.querySelectorAll(".grid-item");
+                    gridItems.forEach((item, index) => {
+                        item.style.backgroundImage = `url(${images[index]})`;
+                        item.style.backgroundSize = "cover";
+                        item.style.backgroundPosition = "center";
+                    });
+                }
+            })
+        })
+    </script>
+
+    <div class="container container-6">
+        <img src="./Images/Shimpo.png" alt="">
+        <span>
+            <div class="social">
+                <img src="./Images/Email.png" alt="">
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>extraishis@gmail.com</p>
+                </div>
+            </div>
+            <div class="social">
+                <img src="./Images/Tiktok.png" alt="">
+                <div class="info">
+                    <h3>Tiktok</h3>
+                    <p><a href="https://www.tiktok.com/@i.ishi?_t=ZS-8vA6zfsZcTA&_r=1">Yoshee (@i.ishi)</a></p>
+                </div>
+            </div>
+            <div class="social">
+                <img src="./Images/Facebook.png" alt="">
+                <div class="info">
+                    <h3>Facebook</h3>
+                    <p><a href="https://www.facebook.com/yosheetiglao?rdid=L0heWfPA2wPiDIYl&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sn5c6UFU%2F#">Yoshieefied</a></p>
+                </div>
+            </div>
+            <div class="social">
+                <img src="./Images/Instagram.png" alt="">
+                <div class="info">
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/yosheerobles?igsh=MTJuaGc3MDdjZGIyaw==">yosheerobles</a></p>
+                </div>
+            </div>
+        </span>
+    </div>
+
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const buttons = document.querySelectorAll(".buttons button");
         
             buttons.forEach(button => {
                 button.addEventListener("click", function () {
                     const target = this.getAttribute("data-target");
-                    const parentContainer = this.closest(".container-3").nextElementSibling; // Gets the corresponding container-4
-                    
+                    const parentContainer = this.closest(".container-3").nextElementSibling;
+        
                     if (!parentContainer) return;
-
-                    const projectContainers = parentContainer.querySelectorAll(".project-container");
-                    
-                    // Hide all project containers
-                    projectContainers.forEach(container => {
-                        container.classList.remove("active");
-                    });
-                    
-                    // Show the selected category
-                    const targetContainer = parentContainer.querySelector(`#${target}`);
-                    if (targetContainer) {
-                        targetContainer.classList.add("active");
-                    }
-
+        
+                    const allProjects = parentContainer.querySelectorAll(".project-container");
+                    const currentActive = parentContainer.querySelector(".project-container.active");
+                    const nextActive = parentContainer.querySelector(`#${target}`);
+        
+                    if (!nextActive || currentActive === nextActive) return;
+        
                     // Remove active class from all buttons in the same section
                     this.closest(".container-3").querySelectorAll(".buttons button").forEach(btn => {
                         btn.classList.remove("active");
                     });
-
-                    // Add active class to clicked button
                     this.classList.add("active");
+        
+                    // Handle transition
+                    if (currentActive) {
+                        currentActive.style.opacity = "0";
+                        setTimeout(() => {
+                            currentActive.classList.remove("active");
+        
+                            nextActive.classList.add("active");
+                            nextActive.style.opacity = "0";
+        
+                            void nextActive.offsetWidth; // trigger reflow
+        
+                            setTimeout(() => {
+                                nextActive.style.opacity = "1";
+                            }, 50);
+                        }, 500); // Match this with CSS transition time
+                    } else {
+                        // If there's no current active container
+                        nextActive.classList.add("active");
+                        nextActive.style.opacity = "0";
+                        void nextActive.offsetWidth;
+                        setTimeout(() => {
+                            nextActive.style.opacity = "1";
+                        }, 50);
+                    }
                 });
             });
         });
     </script>
+        
+
 
 </body>
 </html>
